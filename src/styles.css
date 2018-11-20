@@ -38,3 +38,7 @@ a:hover, a:focus, a:active {
     color: #86bc42;
 }
 
+.help-block{
+    color:red;
+    font-family: cursive;
+}
