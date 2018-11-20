@@ -1,0 +1,28 @@
+
+.home-section {
+    padding: 30px 39px 0;
+}
+.widget {
+    margin: 0 0 1.5em;
+}
+.fixbgcl .buzz-title {
+    font-size: 29px;
+    letter-spacing: 2px;
+    text-align: center;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    line-height: 34px;
+}
+ .buzz-subTitle {
+    color: #f31111;
+    display: block;
+    font-size: 19px;
+    letter-spacing: 2px;
+    text-align: center;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    word-spacing: 2px;
+}

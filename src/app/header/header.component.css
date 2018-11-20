@@ -1,0 +1,119 @@
+.bgclr{
+	background-color: #1eaf22; 
+	color: #fff; 
+	line-height: 45px;
+	font-size: 13px;
+	text-align: center;
+}
+.fixbgcl{
+	background-color: #1eaf22; 
+	color: #ddd; 
+	line-height: 45px;
+	margin: 15px;
+	
+	
+}
+.bgclr a{
+	color: #fff;
+}
+
+.secndrw{
+	padding: 15px 0px;
+}
+/*.product-search {
+    position: relative;
+}*/
+.header-search_filter {
+    position: relative;
+    display: inline-block;
+    width: 30%;
+}
+.product-search-field, .header-search_filter .formDropdown {
+    width: 100%;
+    font-size: 12px;
+    padding: 0px 6px;
+    text-transform: uppercase;
+    height: 44px;
+    font-weight: bold;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    line-height: 44px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    background-position-x: 95%;
+    border-radius: 0;
+    -ms-border-radius: 0;
+    -webkit-border-radius: 0;
+}
+
+.header-search_filter i {
+    position: absolute;
+    right: 2px;
+    top: 16px;
+    background: transparent;
+    width: 15px;
+    height: 10px;
+}
+.form-group {
+    position: absolute;
+    width: 70%;
+    right: 0;
+    top: 0;
+}
+.header-search_form .product-search-field {
+    padding-right: 48px;
+    padding-left: 10px;
+    width: 100%;
+}
+
+.product-search button {
+    padding: 0;
+}
+
+.buzz-cart-main {
+    float: right;
+    height: 44px;
+    position: relative;
+    padding-left: 43px;
+}
+.view-cart a {
+    display: block;
+    height: 44px;
+    line-height: 44px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+    padding: 0px 10px;
+    background: #fff;
+    border: 1px solid #86bc42;
+}
+
+.buzz-viewcartproduct {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    min-width: 300px;
+    width: 100%;
+    background: #191818;
+    z-index: -1;
+    opacity: 0;
+    height: auto;
+}
+.buzz-block-subtitle {
+    color: #fff;
+    background: #86bc42;
+    font-size: 15px;
+    display: block;
+    padding: 8px;
+}
+.buzz-viewcartproduct .widget_shopping_cart {
+    background: #fff;
+    margin-bottom: 0;
+    border: 1px solid #86bc42;
+}
+.woocommerce-mini-cart__empty-message {
+    text-align: center;
+}

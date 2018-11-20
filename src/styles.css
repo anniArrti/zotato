@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+select {
+    border: 1px solid #ccc;
+}
+body, button, input, select, textarea {
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #737373;
+    background-color: #ffffff;
+}
+p {
+    line-height: 22px;
+}
+p, label, span {
+    font-size: 14px;
+}
+button.product-search {
+    width: 44px;
+    height: 44px;
+    font-size: 16px;
+    line-height: 44px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 9999;
+}
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+    border: 1px solid;
+    border-color: #86bc42;
+    background-color: #86bc42;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 1;
+    padding: 10px 18px;
+}
+a:hover, a:focus, a:active {
+    color: #86bc42;
+}
+
