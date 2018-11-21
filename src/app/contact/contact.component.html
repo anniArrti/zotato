@@ -1,0 +1,33 @@
+<!--<app-header></app-header>-->
+<div class="container-fluid">
+	 <!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13694.976676352797!2d77.08308012749124!3d30.893817005298516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390f86af436fd86d%3A0x305ab3d242cac5ef!2sNagali Solan%2C+Himachal+Pradesh+173211!5e0!3m2!1sen!2sin!4v1538655650426" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>  -->
+	<div class="row">
+		<div class="col-md-12">
+		<form #forms="ngForm" (ngSubmit)="contact(form)">
+			<div class="form-group">
+				<label> Your Name (required)</label>
+			    <input type="text" name="your-name" size="40" class="form-control" #name="ngModel" [(ngModel)]="form.name" required aria-required="true" aria-invalid="false" /> 
+		    </div>
+			<div class="form-group">
+				<label> Your Email (required)</label>
+				<input type="email" name="your-email" id="email" size="40" class="form-control" #email="ngModel" [email]="form.email!==''" [(ngModel)]="form.email" required aria-required="true" aria-invalid="false" />
+			</div>
+			<div class="form-group">
+				<label> Subject</label>
+				<input type="text" name="your-subject" id="subject" size="40" class="form-control" #subject="ngModel" [(ngModel)]="form.subject" required aria-invalid="false" />
+			</div>
+			<div class="form-group">
+				<label> Your Message</label>
+				<textarea name="your-message" id="message" cols="40" rows="10" class="form-control" #message="ngModel" [(ngModel)]="form.message" required></textarea>
+			</div>
+			<div class="form-group">
+				<input type="submit" value="Send" class="wpcf7-form-control wpcf7-submit" [disabled]="!forms.valid"/>
+			</div>
+		</form>
+		</div>
+		<ul>
+		    <li *ngFor="let item of alldatas">{{item.email}} | {{item.name}} </li>
+		  </ul>
+	</div>
+</div>
+<!-- <app-footer></app-footer>-->

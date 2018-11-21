@@ -20,8 +20,10 @@ datas;
 
   ngOnInit() {
   }
+
 login(form){
 	console.log(form);
+  form.functions = "login";
 	 this.dataService.login(form).subscribe(data => {
 	 	if(data.data == "Matching"){
 	 		alert("");
