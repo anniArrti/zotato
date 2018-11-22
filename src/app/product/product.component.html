@@ -1,0 +1,37 @@
+<!-- <app-header></app-header> -->
+<div class="breadcrumbswrap buzz-paralax" style="background:url('https://zotato.in/wp-content/themes/buzzstore/assets/images/15.jpg')">
+	<div class="buzz-overlay"></div>
+	<div class="buzz-container wow zoomIn" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: zoomIn;">
+        <header class="entry-header">
+            <h1 class="entry-title">Account</h1>                    
+        </header>
+        <ul><li><a href="/home">Home</a> / Account</li></ul>                
+    </div>
+</div>
+<div class="container">
+  	<div class="row" *ngFor="let item of alldatas" style="padding: 30px 0px; overflow: visible; box-sizing: border-box; min-height: 1px;">
+		<div class="col-sm-4">
+			<img src={{item.product}} />
+			
+		</div>
+		<div class="col-sm-4">
+			<p>{{item.name}}</p>
+			<p>{{item.cost}}</p>
+		</div>
+		<div class="col-sm-4">
+			<section id="secondaryright" class="widget-area" role="complementary" style="position: relative; overflow: visible; box-sizing: border-box; min-height: 1px;">
+				<div class="theiaStickySidebar" style="padding-top: 0px; padding-bottom: 1px; position: static; transform: none; left: 1016px; top: 0px;">
+					<section id="search-2" class="widget widget_search">
+						<form role="search" method="get" class="search-form" action="https://zotato.in/">
+							<label>
+								<span class="screen-reader-text">Search for:</span>
+								<input type="search" class="search-field" placeholder="Search …" value="" name="s">
+							</label>
+							<input type="submit" class="search-submit" value="Search">
+						</form>
+					</section>
+				</div>
+			</section>
+		</div>
+  	</div>
+</div>

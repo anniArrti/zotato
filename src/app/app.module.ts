@@ -14,6 +14,7 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { ContactComponent } from './contact/contact.component';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ContactComponent } from './contact/contact.component';
     HeaderComponent,
     HomeComponent,
     RegisterComponent,
-    ContactComponent
+    ContactComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,

@@ -58,7 +58,7 @@
         	break;
         	case "getall":
         		$cars = [];
-				$sql = "SELECT id, name, email FROM contact";
+				$sql = "SELECT * FROM product";
 
 				if($result = mysqli_query($con,$sql))
 				{
@@ -66,8 +66,32 @@
 				  while($row = mysqli_fetch_assoc($result))
 				  {
 				    $cars[$cr]['id']    = $row['id'];
+				    $cars[$cr]['product'] = $row['pdoduct'];
+				    $cars[$cr]['cost'] = $row['cost'];
+				    $cr++;
+				  }
+				    
+				  echo json_encode(['data'=>$cars]);
+				}
+				else
+				{
+				  http_response_code(404);
+				}
+        	break;
+        	case "getbyid":
+        		$id = mysqli_real_escape_string($con, trim($request->form->id));
+        		$cars = [];
+				$sql = "SELECT * FROM product where id=".$id;
+
+				if($result = mysqli_query($con,$sql))
+				{
+				  $cr = 0;
+				  while($row = mysqli_fetch_assoc($result))
+				  {
+				    $cars[$cr]['id']    = $row['id'];
+				    $cars[$cr]['product'] = $row['pdoduct'];
+				    $cars[$cr]['cost'] = $row['cost'];
 				    $cars[$cr]['name'] = $row['name'];
-				    $cars[$cr]['email'] = $row['email'];
 				    $cr++;
 				  }
 				    
@@ -82,16 +106,4 @@
         	echo "function not defined";
 		}
     } 
-    /*$email = $_POST["email"];
-	$password = $_POST["password"];
-	$name = $_POST["name"];
-	$age = $_POST["age"];
-
-	$address = $_POST["address"];
-	$gender = $_POST["r1"];
-	$country = $_POST["country"];
-	$state = $_POST["state"];
-	$image = basename($_FILES["file"]["name"]);*/
-	/*$query="INSERT INTO `angularform`( `name`, `email`, `age`, `image`, `address`, `gender`, `country`, `state`) VALUES ('$name','$email','$age','$image','$address','$gender','$country','$state')";
-	echo $query;*/
 ?>

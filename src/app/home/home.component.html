@@ -1,4 +1,4 @@
-<app-header></app-header>
+<!-- <app-header></app-header> -->
 <section class="home-section widget">
   <div class="row">
       <marquee direction="left" style="background-color:#1eaf22; padding: 10px 0px;"> 
@@ -8,14 +8,20 @@
       </marquee>
       <div class="col-md-12">
         <p class="buzz-subTitle wow zoomIn" style="visibility: visible; animation-name: zoomIn;">
-                        Buy 5 Order Get 1 Free Order Every Item Free Home Delivery</p>
+          Buy 5 Order Get 1 Free Order Every Item Free Home Delivery</p>
       </div>
   </div>
-  <div class="row">
-    <div class="col-md-3"><a href="/product/1">1</a></div>
-    <div class="col-md-3"><a href="/product/2">2</a></div>
-    <div class="col-md-3"><a href="/product/3">3</a></div>
-    <div class="col-md-3"><a href="/product/4">4</a></div>
+  <div class="row" >
+    <div class="col-md-3" *ngFor="let item of alldatas">
+      <div class="brdr">
+        <a routerLink="/product/{{item.id}}">
+          <img src={{item.product}} />
+        </a>
+        <p class="prdnm">{{item.name}}</p>
+        <p class="pdrcst">₹ {{item.cost}}</p>
+        <button>Order Now</button>
+      </div>
+    </div>
   </div>
   </section>
   <section class="home-section widget">
@@ -31,10 +37,7 @@
       </div>
   </div>
   <div class="row">
-    <div class="col-md-3"><a href="/product/1">1</a></div>
-    <div class="col-md-3"><a href="/product/2">2</a></div>
-    <div class="col-md-3"><a href="/product/3">3</a></div>
-    <div class="col-md-3"><a href="/product/4">4</a></div>
+    <div class="col-md-3" *ngFor="let item of alldatas"><a href="/product/id"><img src={{item.product}}></a></div>
   </div>
   </section>
   <section class="home-section widget">
@@ -50,10 +53,7 @@
       </div>
   </div>
   <div class="row">
-    <div class="col-md-3"><a href="/product/1">1</a></div>
-    <div class="col-md-3"><a href="/product/2">2</a></div>
-    <div class="col-md-3"><a href="/product/3">3</a></div>
-    <div class="col-md-3"><a href="/product/4">4</a></div>
+    <div class="col-md-3" *ngFor="let item of alldatas"><a href="/product/id"><img src={{item.product}}></a></div>
   </div>
   </section>
   <section class="home-section widget">
@@ -69,10 +69,7 @@
       </div>
   </div>
   <div class="row">
-    <div class="col-md-3"><a href="/product/1">1</a></div>
-    <div class="col-md-3"><a href="/product/2">2</a></div>
-    <div class="col-md-3"><a href="/product/3">3</a></div>
-    <div class="col-md-3"><a href="/product/4">4</a></div>
+    <div class="col-md-3" *ngFor="let item of alldatas"><a href="/product/id"><img src={{item.product}}></a></div>
   </div>
   </section>
   <section class="home-section widget">
@@ -88,10 +85,7 @@
       </div>
   </div>
   <div class="row">
-    <div class="col-md-3"><a href="/product/1">1</a></div>
-    <div class="col-md-3"><a href="/product/2">2</a></div>
-    <div class="col-md-3"><a href="/product/3">3</a></div>
-    <div class="col-md-3"><a href="/product/4">4</a></div>
+    <div class="col-md-3" *ngFor="let item of alldatas"><a href="/product/id"><img src={{item.product}}></a></div>
   </div>
   </section>
-  <app-footer></app-footer>
+  <!-- <app-footer></app-footer> -->

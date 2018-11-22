@@ -1,0 +1,126 @@
+.buzz-paralax {
+    background-attachment: fixed !important;
+    background-position: 50% 100% !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+.breadcrumbswrap {
+    min-height: 300px;
+    padding: 108px 0 50px;
+    position: relative;
+}
+.buzz-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+}
+.breadcrumbswrap .buzz-container {
+    position: relative;
+}
+.buzz-container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.breadcrumbswrap .entry-header {
+    padding-left: 0;
+    padding-right: 0;
+    min-width: 320px;
+    position: relative;
+    z-index: 1;
+}
+.breadcrumbswrap .entry-header h1 {
+    font-size: 35px;
+    text-align: center;
+    color: #fff;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+.breadcrumbswrap ul {
+    margin: 40px 0;
+    padding: 0;
+}
+.breadcrumbswrap ul li {
+    list-style-type: none;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+}
+.breadcrumbswrap ul li a {
+    color: #86bc42;
+}
+.buzz-row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+h2{
+    width: 100%;
+    height: auto;
+    line-height: 21px;
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    background-color: #fafafa;
+    border-left: 4px solid #86bc42;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    display: inline-block;
+    color: #555555;
+    font-size: 16px;
+    font-weight: 500;
+}
+.widget_search .search-form {
+    width: 100%;
+    border: 1px solid #ced0d6;
+    display: table;
+}
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+.widget_search .search-form .search-field {
+    width: 70%;
+    height: 40px;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    padding-left: 8px;
+    padding-right: 0;
+    color: #adadad;
+    font-family: Helvetica, Arial, sans-serif;
+}
+.widget_search .search-form .search-submit {
+    color: #fff;
+    border: none;
+    padding: 14px;
+    position: relative;
+    float: right;
+    background: #86bc42;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+ #secondaryright {
+    padding: 25px 0;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.widget {
+    margin: 0 0 1.5em;
+}
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+}

@@ -1,8 +1,9 @@
 export class Form {
+	id:number;
 	name: string;
 	email: string;
 	password: string;
 	message: string;
 	subject: string;
-	functions: string;
+	functions: any;
 }
