@@ -16,7 +16,7 @@ alldat;
   constructor(private dataService: DataService,
   private router: Router,
   private activatedRoute: ActivatedRoute) { }
-alldatas
+alldatas;
   ngOnInit() {
   	this.getall();
   }

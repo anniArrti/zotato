@@ -15,7 +15,9 @@ import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProductComponent } from './product/product.component';
-
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { CartComponent } from './cart/cart.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,14 +27,17 @@ import { ProductComponent } from './product/product.component';
     HomeComponent,
     RegisterComponent,
     ContactComponent,
-    ProductComponent
+    ProductComponent,
+    CartComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    HttpModule
+    HttpModule,
+    AngularFontAwesomeModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

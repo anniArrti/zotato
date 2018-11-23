@@ -1,0 +1,27 @@
+.loginbtn, .coupanbtn{
+	    background: none;
+    border: 0px;
+    color: #000;
+    padding: 10px 0px;
+}
+button:focus {
+
+    outline: 0px auto -webkit-focus-ring-color;
+}
+form.login, .woocommerce form.register {
+    border: 1px solid #d3ced2;
+    padding: 20px;
+    margin: 2em 0;
+    text-align: left;
+}
+.woocommerce form .form-row label {
+    line-height: 2;
+}
+.woocommerce form .form-row input.input-text, .woocommerce form .form-row textarea {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    outline: 0;
+    line-height: normal;
+        line-height: 2.3;
+}

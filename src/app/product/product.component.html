@@ -1,4 +1,4 @@
-<!-- <app-header></app-header> -->
+<!--  <app-header></app-header>
 <div class="breadcrumbswrap buzz-paralax" style="background:url('https://zotato.in/wp-content/themes/buzzstore/assets/images/15.jpg')">
 	<div class="buzz-overlay"></div>
 	<div class="buzz-container wow zoomIn" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: zoomIn;">
@@ -7,22 +7,39 @@
         </header>
         <ul><li><a href="/home">Home</a> / Account</li></ul>                
     </div>
-</div>
+</div> -->
 <div class="container">
-  	<div class="row" *ngFor="let item of alldatas" style="padding: 30px 0px; overflow: visible; box-sizing: border-box; min-height: 1px;">
+  	<div class="row primary" *ngFor="let item of onedata">
 		<div class="col-sm-4">
-			<img src={{item.product}} />
-			
+			<img src={{item.product}} class="proimg"/>
 		</div>
 		<div class="col-sm-4">
-			<p>{{item.name}}</p>
-			<p>{{item.cost}}</p>
+			<div class="row summary entry-summary">
+				<div class="col-sm-12">
+				<h1 class="product_title entry-title">{{item.name}}</h1>
+				<p class="price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">₹</span>{{item.cost}}</span></p>			
+			<form class="cart" method="post" enctype="multipart/form-data">
+				<div class="quantity">
+				<input type="hidden" value="{{item.name}}" name="product_name" id="product_name">
+				<input type="hidden" value="{{item.cost}}" name="product_cost" id="product_cost">
+				<button onclick="var result = document.getElementById('qty1'); var qty = result.value; if( !isNaN( qty ) &amp;&amp; qty > 1 ) { result.value--; } else{ result.value = 1;} jQuery('#qty1').trigger('change'); return false;" class="reduced items-count" type="button"><i class="fa fa-minus">&nbsp;</i></button>
+				<input type="text" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text buzzstore-qty-input" size="4" pattern="[0-9]*" inputmode="numeric" aria-labelledby="" id="qty1">
+				<button onclick="var result = document.getElementById('qty1'); var qty = result.value; if( !isNaN( qty )) { result.value++;} else { result.value = 1 } jQuery('#qty1').trigger('change'); return false;" class="increase items-count" type="button"><i class="fa fa-plus">&nbsp;</i></button>
+				</div>
+				<button type="submit" name="add-to-cart"  (click)="order()" value="158" class="single_add_to_cart_button button alt" id="ordernow">Order Now</button>
+			</form>
+			</div>
+			<div class="product_meta col-sm-12">
+				<span class="posted_in">Categories: <a href="#" rel="tag">Dinner</a>, <a href="#" rel="tag">lunch</a></span>
+			</div>
+			
+			</div>
 		</div>
 		<div class="col-sm-4">
 			<section id="secondaryright" class="widget-area" role="complementary" style="position: relative; overflow: visible; box-sizing: border-box; min-height: 1px;">
 				<div class="theiaStickySidebar" style="padding-top: 0px; padding-bottom: 1px; position: static; transform: none; left: 1016px; top: 0px;">
 					<section id="search-2" class="widget widget_search">
-						<form role="search" method="get" class="search-form" action="https://zotato.in/">
+						<form role="search" method="get" class="search-form" action="/">
 							<label>
 								<span class="screen-reader-text">Search for:</span>
 								<input type="search" class="search-field" placeholder="Search …" value="" name="s">
@@ -34,4 +51,21 @@
 			</section>
 		</div>
   	</div>
+  	<!-- <div class="row">
+  		<div class="col-md-8">
+			      <div class="row">
+			      <h2>Related products</h2>
+			      <div class="col-md-3" *ngFor="let item of alldatas">
+			      <div class="brdr">
+			        <a routerLink="/product/{{item.id}}">
+			          <img src={{item.product}} />
+			        </a>
+			        <p class="prdnm">{{item.name}}</p>
+			        <p class="pdrcst">₹ {{item.cost}}</p>
+			        <button>Order Now</button>
+			        </div>
+			      </div>
+			    </div>
+			</div>
+  	</div> -->
 </div>

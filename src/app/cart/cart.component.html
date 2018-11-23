@@ -1,0 +1,98 @@
+<!--<app-header></app-header>-->
+<div class="container-fluid breadcrumbswrap buzz-paralax">
+    <div class="buzz-overlay"></div>
+    <div class="buzz-container wow zoomIn" data-wow-delay="0.3s">
+        <header class="entry-header">
+            <h1 class="entry-title">Cart</h1>                   
+        </header>
+        <ul><li><a routerLink="/home">Home</a> / Cart</ul>              
+     </div>                
+</div> 
+
+<div class="container" style="margin-top: 30px; color: #737373;">
+<div class="row empty" *ngIf= "datalength == '0';else assignTaskdiv">
+	<p>Your cart is currently empty.</p>
+</div>
+<ng-template #assignTaskdiv>
+<div class="row woocommerce-notices-wrapper"></div>
+<form class="woocommerce-cart-form">
+	<div class="table-responsive">
+	<table class="table table-bordered shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
+		<thead>
+			<tr>
+				<th class="product-remove">&nbsp;</th>
+				<th class="product-thumbnail">&nbsp;</th>
+				<th class="product-name">Product</th>
+				<th class="product-price">Price</th>
+				<th class="product-quantity">Quantity</th>
+				<th class="product-subtotal">Total</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="woocommerce-cart-form__cart-item cart_item" *ngFor="let item of alldatas;let ind = index ">
+				<td class="product-remove">
+					<a (click)="remove(ind)" class="remove" aria-label="Remove this item" data-product_id="158" data-product_sku="">×</a>						
+				</td>
+				<td class="product-thumbnail">
+					<a href="#">
+					<img width="50" height="50" src="https://zotato.in/wp-content/uploads/2018/10/daal-tadka-300x300.jpg"></a>
+				</td>
+				<td class="product-name" data-title="Product">
+					<a href="">{{item.product}}</a>	
+					<input type="hidden" class="productname" value="{{item.product}}">					
+				</td>
+				<td class="product-price" data-title="Price">
+					<span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">₹</span>{{item.price}}</span>
+					<input type="hidden" class="price" value="{{item.price}}">
+				</td>
+				<td class="product-quantity" data-title="Quantity">
+					<div class="quantity">
+						<button (click)="minus(ind)" class="reduced items-count" type="button"><i class="fa fa-minus">&nbsp;</i></button>
+						<input type="text" step="1" min="0" max="" name="cart" value="{{item.quantity}}" title="Qty" class="input-text qty text buzzstore-qty-input" size="4" pattern="[0-9]*" inputmode="numeric" [attr.id]="'qty' +ind">
+						<button (click)="plus(ind)" class="increase items-count" type="button"><i class="fa fa-plus">&nbsp;</i></button>
+					</div>
+				</td>
+				<td class="product-subtotal" data-title="Total">
+				<span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">₹</span>{{item.totalprice}}</span></td>
+			</tr>
+			<tr>
+				<td colspan="6" class="actions">
+				<div class="coupon">
+					<label for="coupon_code">Coupon:</label> 
+					<input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="Coupon code"> 
+					<button type="submit" class="button" name="apply_coupon" value="Apply coupon" id="apply_coupon" >Apply coupon</button>
+				</div>
+				<button type="submit" class="button" name="update_cart" value="Update cart" id="update_cart" (click)="update()">Update cart</button>	
+				<input type="hidden" id="woocommerce-cart-nonce" name="woocommerce-cart-nonce" value="05895051f7">
+				<input type="hidden" name="_wp_http_referer" value="/cart/">				
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+</form>
+<div class="row cart-collaterals">
+	<div class="col-md-7"></div>
+	<div class="col-md-5 cart_totals calculated_shipping">
+	<h2>Cart totals</h2>
+	<table cellspacing="0" class="table shop_table shop_table_responsive">
+		<tbody>
+			<tr class="cart-subtotal">
+				<th>Subtotal</th>
+				<td data-title="Subtotal"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">₹</span>{{total}}.00</span></td>
+			</tr>
+			<tr class="order-total">
+				<th>Total</th>
+				<td data-title="Total"><strong><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">₹</span>{{total}}.00</span></strong> </td>
+			</tr>
+		</tbody>
+	</table>
+	<div class="wc-proceed-to-checkout">	
+	<a (click)="checkout()" class="checkout-button button alt wc-forward">
+	Proceed to checkout</a>
+	</div>	
+</div>
+</div>
+</ng-template>
+</div>
+<!-- <app-footer></app-footer> -->

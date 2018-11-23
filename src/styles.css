@@ -42,3 +42,67 @@ a:hover, a:focus, a:active {
     color:red;
     font-family: cursive;
 }
+.buzz-paralax {
+    background-attachment: fixed !important;
+    background-position: 50% 100% !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+.breadcrumbswrap {
+    min-height: 300px;
+    padding: 108px 0 50px;
+    position: relative;
+}
+.buzz-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+}
+.breadcrumbswrap .buzz-container {
+    position: relative;
+}
+.buzz-container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.breadcrumbswrap .entry-header {
+    padding-left: 0;
+    padding-right: 0;
+    min-width: 235px;
+    position: relative;
+    z-index: 1;
+}
+.breadcrumbswrap .entry-header h1 {
+    font-size: 35px;
+    text-align: center;
+    color: #fff;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+.breadcrumbswrap ul {
+    margin: 40px 0;
+    padding: 0;
+}
+.breadcrumbswrap ul li {
+    list-style-type: none;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+}
+.breadcrumbswrap ul li a {
+    color: #86bc42 !important;
+}
+.buzz-row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.breadcrumbswrap {
+   background-image: url("https://zotato.in/wp-content/themes/buzzstore/assets/images/15.jpg");
+}
