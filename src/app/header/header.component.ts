@@ -20,5 +20,4 @@ price:any= 0.00;
   	this.price = sessionStorage.getItem('price');
   	this.price = this.price * this.quantity;
   }
-
 }

@@ -22,12 +22,11 @@ datas;
   }
 
 login(form){
-	console.log(form);
-  form.functions = "login";
+   form.functions = "login";
 	 this.dataService.login(form).subscribe(data => {
 	 	if(data.data == "Matching"){
 	 		alert("");
-        //this.auth.sendToken(this.form.email);
+      //this.auth.sendToken(this.form.email);
     }
     else{
         this.datas = data.data;

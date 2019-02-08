@@ -90,7 +90,6 @@ update(){
   var products = $(".productname");
   var prices = $(".price");
   for(var i = 0; i < inputs.length; i++){
-    
     var quantity =$(inputs[i]).val();
     var product = $(products[i]).val();
     var price = $(prices[i]).val();

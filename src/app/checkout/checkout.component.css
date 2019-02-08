@@ -23,5 +23,8 @@ form.login, .woocommerce form.register {
     margin: 0;
     outline: 0;
     line-height: normal;
-        line-height: 2.3;
+    line-height: 2.3;
+}
+.woocommerce-input-wrapper{
+    width: 100%;
 }

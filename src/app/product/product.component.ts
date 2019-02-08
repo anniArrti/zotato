@@ -63,7 +63,7 @@ sessionobj={};
       "product": this.product,
       "totalprice": this.totalprice
     }
-    if(this.data == 'null'){
+    if(this.data == 'null' || this.data == null){
       this.data = [this.sessionobj];
     }
     else{
