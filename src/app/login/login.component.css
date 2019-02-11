@@ -104,7 +104,7 @@ a:hover{
 .widget_search .search-form .search-submit {
     color: #fff;
     border: none;
-    padding: 14px;
+    padding: 16px;
     position: relative;
     float: right;
     background: #86bc42;
@@ -125,4 +125,14 @@ label {
     max-width: 100%;
     margin-bottom: 5px;
     font-weight: 700;
+}
+.btn-default{
+    margin-left: 10px;
+}
+.opnmodl:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.woocommerce-privacy-policy-text{
+    margin: 1.2rem 0px;
 }

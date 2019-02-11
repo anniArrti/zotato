@@ -34,7 +34,7 @@
 						</label>
 					</p>
 					<p class="woocommerce-LostPassword lost_password">
-						<a href="#">Lost your password?</a>
+						<a class="opnmodl" data-toggle="modal" data-target="#myModal">Lost your password?</a>
 					</p>
 				</form>
 			</div>
@@ -70,6 +70,32 @@
 			</section>
 		</div>
 	</section>
+	</div>
+</div>
+<div class="modal fade" id="myModal" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+				<form class="woocommerce-form woocommerce-form-login" #formsf="ngForm" (ngSubmit)="forgotpassword(form)">	
+			<div class="modal-header">
+				<h4 class="modal-title">If You Forgot Password</h4>
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+			<div class="modal-body">
+				<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide" [class.has-error]="emails.invalid && emails.touched">
+					<label for="username">Email address&nbsp;<span class="required">*</span></label>
+					<input type="email" class="woocommerce-Input woocommerce-Input--text input-text" name="emails" id="emails" #emails="ngModel" [email]="form.emails!==''" [(ngModel)]="form.emails" required>
+					<span class="help-block" *ngIf="emails.errors?.emails && emails.touched"> Email Is Invalid</span>		
+				</p>
+			</div>
+			<div class="modal-footer">
+				<p class="woocommerce-FormRow form-row">			
+					<button type="submit" class="woocommerce-Button button" name="register" [disabled]="!formsf.valid" value="Register">Submit</button>
+					<button type="button" class="button btn-default" data-dismiss="modal">Close</button>
+				</p>
+			</div>
+		</form>
+		</div>
+		
 	</div>
 </div>
 </div>

@@ -46,6 +46,10 @@ form: Form[];
       return this.http.post('http://localhost/anil/controller.php',{form})
            .map((response: Response) =>response.json())
     }
+    forgotpassword(form : Form){     
+      return this.http.post('http://localhost/anil/controller.php',{form})
+             .map((response: Response) =>response.json())              
+      }
   	/*singUp(form : Form){     
     return this.http.post('api/singUp/', JSON.stringify(form), {headers: this.headers}) 
            .map((response: Response) =>response.json())              

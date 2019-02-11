@@ -33,4 +33,17 @@ login(form){
       }
 	 })
 }
+forgotpassword(form){
+  console.log(form);
+  form.functions = "forgotpassword";
+	 this.dataService.forgotpassword(form).subscribe(data => {
+	 	if(data.data == "Matching"){
+	 		alert("");
+      //this.auth.sendToken(this.form.email);
+    }
+    else{
+        this.datas = data.data;
+      }
+	 })
+}
 }
